@@ -4,7 +4,7 @@ This service is use to company. It includes the following operations
 - Add company
 - List company
 - Update company
-  - Remove company
+- Remove company
 
 ### Architecture
 
