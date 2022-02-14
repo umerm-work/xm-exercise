@@ -38,5 +38,56 @@ or
 `go run main.go`
 
 
-## Documentation
+# API's
 
+| API         | Methood | Example                                                                                                        | Auth               |
+|-------------|---------|----------------------------------------------------------------------------------------------------------------|--------------------|
+| /company    | POST    |                                                                                                      | Cyprus IP Required |
+| /company/{id} | DELETE  | /company/1                                                                                                     | Cyprus IP Required |
+| /company    | GET     | This endpoint is used for filtering. All properties are filterable. Example /company?id=1 OR /company?name=abc |                    |
+| /company    | PUT     |                                                                                                              |                    |
+
+
+### Add Company
+
+**JSON Body**
+
+`{
+"name":"Go",
+"code":"h",
+"website":"hello.com",
+"phone":"123",
+"country":"se"
+}`
+
+### Update Company
+`id` is mandatory in update method.
+
+**JSON Body**
+
+`{
+"id":1
+"name":"Go",
+"code":"h",
+"website":"hello.com",
+"phone":"123",
+"country":"se"
+}`
+
+### Company Filters
+Filters can be applied on all property
+Endpoint
+
+`/company?propertyName=value`
+
+_Examples_
+
+`/company?code=abc`
+
+`/company?name=abc`
+
+`/company?website=abc`
+
+`/company?country=cy`
+
+`/company?id=1`
